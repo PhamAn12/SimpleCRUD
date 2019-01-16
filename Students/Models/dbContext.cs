@@ -1,0 +1,22 @@
+namespace Students.Models
+{
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
+    public partial class dbContext : DbContext
+    {
+        public dbContext()
+            : base("name=dbContext")
+        {
+
+        }
+
+        public DbSet<Infor> Infors { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+        }
+    }
+}
